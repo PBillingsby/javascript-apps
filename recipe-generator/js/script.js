@@ -1,5 +1,5 @@
 function findRecipe() {
-  event.preventDefault()
+  document.getElementById('recipes').innerHTML = "";
   let searchQuery = document.querySelector('input').value;
   fetch('http://www.recipepuppy.com/api/?q=' + searchQuery)
   .then(resp => resp.json())
@@ -23,7 +23,7 @@ function createCard(obj) {
   let rest = `<div class="card-body">
     <h5 class="card-title">${obj.title}</h5>
     <p class="card-text">${obj.ingredients}</p>
-    <a href="${obj.href}" target="_blank" class="btn btn-primary">Go somewhere</a>`
+    <a href="${obj.href}" target="_blank" class="btn btn-primary">Full Recipe</a>`
   newDiv.innerHTML += rest;
   recipeDiv.append(newDiv);
 }
