@@ -1,9 +1,21 @@
 body {
   height: auto;
 }
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+.container {
+  padding-bottom: 7.5vh;
+}
+footer {
+  width: 100vw;
+  padding: 10px;
+  background-color: #E9ECEF;
+  text-align: center;
+}
 .thumbnail-image {
   width: 100px;
-  border: 1px solid #444;
 }
 .card {
   padding-top: 10px;
@@ -11,17 +23,8 @@ body {
 #form {
   padding: 15px;
 }
-
-ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-footer {
-  width: 100vw;
-  padding: 10px;
-  background-color: #E9ECEF;
-  position: fixed;
-  bottom: 0;
-  text-align: center;
+#recipes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
 }

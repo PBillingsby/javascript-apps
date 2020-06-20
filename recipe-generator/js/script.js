@@ -21,6 +21,9 @@ function createCard(obj, element) {
   if (obj.thumbnail) {
     newDiv.innerHTML += `<img class="card-img-top thumbnail-image mx-auto" src="${obj.thumbnail}" alt="Card image cap">`
   }
+  else {
+    newDiv.innerHTML += `<img class="card-img-top thumbnail-image mx-auto" src="https://i.dlpng.com/static/png/6811945_preview.png" alt="Card image cap">`
+  }
   let rest = `<div class="card-body">
     <h4 class="card-title">${obj.title}</h4>
     <h6><strong>Ingredients</strong></h6>
