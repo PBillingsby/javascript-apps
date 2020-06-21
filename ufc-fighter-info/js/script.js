@@ -11,11 +11,17 @@ function fetchFighterInfo(fighterObj) {
     document.getElementById('result').innerHTML += `<h4>Fighter Not Found. Try Again</h4>`;
   }
   else {
-    let fighterStats = fighterObj.player;
+    let fighterStats = fighterObj.player[0];
     let fighter = {
-     name: fighterStats.strPlayer
+     name: fighterStats.strPlayer,
+     gender: fighterStats.strGender,
+     height: fighterStats.strHeight,
+     weight: fighterStats.strWeight,
+     birthPlace: fighterStats.strBirthLocation,
+     nationality: fighterStats.strNationality
+
     }
-  console.log(fighter.name)
+  console.log(fighter)
   }
   
 }
