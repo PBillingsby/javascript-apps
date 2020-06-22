@@ -18,11 +18,10 @@ function iterateJobs(jobObject) {
 function createJobCard(job) {
   let card = document.createElement('div');
   card.classList.add('card', 'job-card');
-  card.innerHTML = `<h5 class="card-title">${job.title}</h5><p>${job.company}</p>
-  <p>${job.location}</p><div>${job.description}</div><input type="button" value="View Description" class="description-button">`;
+  card.innerHTML = `<h5 class="card-title">Title: ${job.title}</h5><p>Company: ${job.company}</p>
+  <p>Location: ${job.location}</p><div id="job-description">${job.description}</div><input type="submit" value="View Description" class="btn btn-primary description-button">`;
   card.querySelector('div').classList.add('description-style');
   card.querySelector('input').addEventListener('click', () => {
-    // card.querySelector('div').classList = "";
     descDisplay(card.querySelector('div'))
   })
   document.getElementById('result').append(card);
