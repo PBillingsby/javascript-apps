@@ -1,5 +1,16 @@
+body {
+  background-image: url('https://toppng.com/uploads/preview/code-text-colorful-symbols-programming-11570018517ehhiwfnwii.jpg');
+  background-size: cover;
+}
+.container {
+  background-color: #eee;
+  margin-top: 10vh;
+}
 .description-style {
   display: none;
+}
+.description-button {
+
 }
 .card {
   max-height: 45vh;

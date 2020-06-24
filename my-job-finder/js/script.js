@@ -9,6 +9,11 @@ function jobSearch() {
 }
 
 function iterateJobs(jobObject) {
+  document.getElementById('no-result').innerHTML = "";
+  if (!jobObject.length) {
+    document.getElementById('no-result').innerHTML += `<h4 class="text-center">No jobs found. Try again.</h4>`
+    document.getElementById('result').innerHTML = "";
+  }
   for (const element in jobObject) {
     let currentJob = jobObject[element];
     createJobCard(currentJob);
