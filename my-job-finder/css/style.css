@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 body {
   background-image: url('https://toppng.com/uploads/preview/code-text-colorful-symbols-programming-11570018517ehhiwfnwii.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Open Sans';
 }
@@ -39,4 +40,8 @@ h1 {
 #result {
   border: 1px solid #444;
   margin: 0 auto;
+}
+.logo {
+  margin-top: 1vh;
+  width: 7vw;
 }

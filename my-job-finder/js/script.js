@@ -23,8 +23,8 @@ function iterateJobs(jobObject) {
 function createJobCard(job) { // Creates div card with job information inside
   let card = document.createElement('div');
   card.classList.add('card', 'job-card');
-  card.innerHTML = `<h5 class="card-title">Title: ${job.title}</h5><p>Company: ${job.company}</p>
-  <p>Location: ${job.location}</p><div id="job-description">${job.description}</div><input type="submit" value="View Description">`;
+  card.innerHTML = `<a href="${job.company_url}" target="_blank"><img src="${job.company_logo}" class="mx-auto logo" alt="company logo"></a><h5 class="card-title">Title: ${job.title}</h5><p>Company: ${job.company}</p>
+  <p>Location: ${job.location}</p><a href="${job.url}" target="_blank">Job Link</a><div id="job-description">${job.description}</div><input type="submit" value="View Description">`;
   card.querySelector('div').classList.add('description-style');
   card.querySelector('input').addEventListener('click', () => {
     descDisplay(card.querySelector('div'));
