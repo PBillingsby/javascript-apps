@@ -1,5 +1,6 @@
 function findName() {
-  event.preventDefault()
+  document.getElementById('result').innerHTML = "";
+  event.preventDefault();
   let input = document.getElementById('name').value
   fetch('https://api.nationalize.io?name=' + input)
   .then(resp => resp.json())
@@ -261,4 +262,15 @@ const countriesObject = {
   YE: 'Yemen',
   ZM: 'Zambia',
   ZW: 'Zimbabwe'
+}
+
+function mutation(arr) {
+  for (let i = 0; i < arr[0].length; i++) {
+    if (!arr[0].includes(arr[1].split("")[i])) {
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
 }
