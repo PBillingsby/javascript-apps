@@ -12,13 +12,13 @@
 </head>
 <body>    
   <h1 class="jumbotron text-center">Random Skate Trick Generator</h1>
+  <h1 class="text-center" id="loss">You Lost</h1>
   <div class="container">
     <div id="trick-form">
       <div id="play-game" class="text-center">
-        <button onclick="showForm()">Play Game</button>
         <form action="#" id="tricks" class="text-center">
             <label>Pick level of difficulty</label>
-            <select id="select-box" onchange="findTricks()">
+            <select id="select-box">
               <option selected disabled>-</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -26,14 +26,15 @@
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
+            <input type="submit" value="Play Game" onclick="showForm()">
           </form>
       </div>
       <div id="form-show">
         <div id="trick-div" class="text-center"></div>
       </div>
     </div>
-    <div id="letters">
-      hey
+    <div>
+      <span id="letters"><h4>LETTERS:</h4></span>
     </div>
   </div>
 </body>
