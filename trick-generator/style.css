@@ -1,3 +1,14 @@
+body {
+  background-image: url('https://images.unsplash.com/photo-1520796738119-1bae68104970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1484&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  padding: 15px 0;
+  background-color: rgba(237, 237, 237, .5);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
 .skateboard {
   width: 100px;
 }
