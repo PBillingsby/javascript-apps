@@ -1,3 +1,21 @@
+body {
+  background-image: url('https://images.unsplash.com/photo-1520796738119-1bae68104970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1484&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#tricks {
+  padding: 15px 0;
+  background-color: rgba(237, 237, 237, .5);
+}
 .skateboard {
   width: 100px;
+}
+#result {
+  display: none;
+  color: red;
+}
+
+.skate-letter {
+  color: yellow;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }

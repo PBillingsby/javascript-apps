@@ -8,24 +8,36 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <script src="script.js"></script>
-  <title>Skate Trick Generator</title>
+  <title>Solo Game of Skate</title>
 </head>
-<body>
+<body>    
+  <h1 class="jumbotron text-center">Random Solo Game of Skate</h1>
   <div class="container">
-    <h1 class="jumbotron text-center">Random Skate Trick Generator</h1>
-    <form action="#" id="tricks" class="text-center">
-      <label>Pick level of difficulty</label>
-      <select id="select-box" onchange="findTricks()">
-        <option selected disabled>-</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-    </form>
-
-    <div id="trick-div" class="text-center"></div>
+    <h1 class="text-center" id="result"></h1>
+    <div id="tricks">
+        <div id="trick-form">
+          <div id="play-game" class="text-center">
+            <form action="#" id="tricks" class="text-center">
+                <label>Pick level of difficulty</label>
+                <select id="select-box">
+                  <option selected disabled>-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <input type="submit" value="Play Game" onclick="showForm()">
+              </form>
+          </div>
+          <div id="form-show">
+            <div id="trick-div" class="text-center"></div>
+          </div>
+        </div>
+      <div>
+        <span id="letters"><h4>LETTERS:</h4></span>
+      </div>
+    </div>
   </div>
 </body>
 </html>
