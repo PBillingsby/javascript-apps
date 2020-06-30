@@ -13,9 +13,8 @@ h1 {
 h2 {
   font-weight: 900 !important;
 }
-span {
+h1 span {
   color: rgb(156, 156, 156) !important;
-  text-shadow: none;
 }
 .container {
   padding: 15px 0;
@@ -37,4 +36,14 @@ span {
   color: rgb(96, 255, 194);
   font-size: 6em;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+@media(max-width: 500px) {
+  #letters {
+    display: flex;
+    flex-direction: row;
+  }
+  h1, h2{
+    font-size: 7.5vh !important;
+  }
 }

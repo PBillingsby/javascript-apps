@@ -22,7 +22,7 @@ function findTricks(value) {
       trickDiv.innerHTML = `<h4>${randomFunc(stance)} ${randomFunc(spins)} ${randomFunc(flipTricks)}!</h4>`;
       break;
     }
-  let youtubeString = trickDiv.innerText.slice(5).replace('!', "").split(" ").join("+");
+  let youtubeString = trickDiv.innerText.replace('!', "").split(" ").join("+");
   trickDiv.innerHTML += `<label>Landed? </label><select onchange="landedTrick()" id="landed"><option selected="true" disabled>-</option><option>Yes</opton><option>No</option></select><p>Find trick tip <a href="https://www.youtube.com/results?search_query=${youtubeString}+trick+tip+skateboard" target="_blank" class="skateboard">here</a></p>`
 }
 
@@ -38,13 +38,14 @@ function landedTrick() {
   }
   else {
     attemptCount++
+
+    document.getElementById('landed-tricks').innerText = attemptCount
     findTricks(difficulty)
   }
   if (gameCount === 5) {
     result.style.display = "block";
     document.getElementById('trick-form').style.display = "none";
     result.innerHTML += `<h2>You Lost!</h2><input type="submit" value="Play Again" onclick="refresh()">`;
-
   }
   else if (attemptCount === 10) {
     result.style.display = "block";
@@ -56,10 +57,11 @@ function landedTrick() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('landed-tricks').innerText = attemptCount
   document.getElementById('form-show').style.display = "none";
 })
 function showForm() {
-  // event.preventDefault();
+  event.preventDefault();
   difficulty = document.getElementById('select-box').selectedIndex;
   findTricks(difficulty);
   document.getElementById('play-game').style.display = "none";
