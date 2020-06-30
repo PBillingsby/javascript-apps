@@ -3,27 +3,27 @@ fetch('https://covidtracking.com/api/v1/states/current.json')
 .then(object => getResults(object)) 
 
 function getResults(obj) {
-
-  let results = document.getElementById('result');
-  for (const state in obj) {
-    let div = document.createElement('div');
+  const results = document.getElementById('result');
+  for (const stateObj in obj) {
+    const stateObject = obj[stateObj].state;
+    const div = document.createElement('div')
     let option = document.createElement('option')
-    option.innerText = obj[state].state
+    option.innerText = stateObject
     document.querySelector('select').append(option)
-    div.innerHTML = `<h1>${obj[state].state}</h1>`;
-    div.style.display = "none";
-    div.id = obj[state].state;
-    results.append(div);
+    div.style.display = "none"
+    div.id = stateObject
+    results.append(div)
   }
 }
 
-
 function selectData() {
-  let query = document.querySelectorAll('option')[event.target.selectedIndex].innerText
-  let docStyle = document.getElementById(query).style.display
-  if (docStyle === 'block')
-    docStyle = "none";
+  const query = document.querySelectorAll('option')[event.target.selectedIndex].innerText
+  const docStyle = document.getElementById(query).style.display
+  if (docStyle === 'block') {
+    document.getElementById(query).style.display = "none"
+  }
   else {
-    docStyle = "block"
+    // document.getElementById('result').innerHTML = ""
+    document.getElementById(query).style.display = "block"
   }
 }
