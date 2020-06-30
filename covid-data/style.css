@@ -1,0 +1,10 @@
+.data-block-positive {
+  width: 5px;
+  background-color: green;
+  color: red;
+}
+
+#result {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+}
