@@ -79,7 +79,7 @@ function findLongState(object) {
     "WI": "Wisconsin",
     "WY": "Wyoming"
   }
-  document.getElementById('result').innerHTML = `<h1 class="text-center">${states[object]}</h1>`
+  document.querySelector('header').innerHTML = `<h1 class="text-center">${states[object]}</h1>`
 }
 
 function getStateData() {
@@ -103,9 +103,9 @@ function getStateData() {
 function selectData() {
   const query = document.querySelectorAll('option')[event.target.selectedIndex].innerText
   const docStyle = document.getElementById(query).style.display
+  
   if (docStyle === 'block') {
     document.getElementById(query).style.display = "none"
-    // document.getElementById('result').innerHTML = ""
   }
   else {
     document.getElementById(query).style.display = "block"
